@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Oswald:wght@600&display=swap');
+body{
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  overflow-y: hidden;
+  font-family: 'Oswald', sans-serif;
+  color: rgb(243, 232, 232);
+  font-weight:40;
+  
+}
+
+
+h2{
+  font-size: 4em;
+  color: #fff;
+  text-align: center;
+  margin: -20px;
+  font-family: 'Merriweather', serif;
+}
+#game-panel{
+  width:60%;
+  background-color:  #F4B41A ;
+    margin:0 auto;
+  text-align:center;
+  height: 100vh;
+  
+  padding:20px;
+  position: relative;
+  
+}
+.score-panel{
+ 
+  float: left;
+  position:absolute;
+  top:40%;
+  left:5%;
+  padding:5px;
+  text-align:center;
+  line-height:40px;
+}
+button{
+  background-color: rgb(255, 254, 254);
+  color:#143D59;
+  width:120px;
+  height: 40px;
+  margin-top:20px;
+  border-radius: 10px;
+  padding: 0;
+border: none;
+font-size: 1.2em;
+font-weight: 700;
+cursor: pointer;
+outline: none;
+}
+.scoreboard{font-size: 1.5em;
+  color: rgb(255, 254, 254);
+  background-color:#143D59;
+  border-radius: 10px;
+}
+.grid{
+  
+  width:480px;
+  padding:5px;
+  top:16%;
+  height:480px;
+  display:flex;
+  flex-wrap: wrap;
+  background-color:#143D59;
+ position:absolute;
+ left:25%;
+  border-radius: 25px;
+}
+.grid div{
+  width:100px;
+  height: 100px;
+  background-color: rgb(255, 254, 254);
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  line-height: 100px;
+ margin:10px;
+ border-radius: 25px;
+ color:#143D59;
+}
+button:hover{
+  color: rgb(255, 254, 254);
+  background-color:#143D59;
+}
