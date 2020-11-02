@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+   
+    <title>2048</title>
+</head>
+<body>
+  <div class="game-box">
+    <h2>2048</h2>
+    <hr>
+    <div id="game-panel">       
+        <div class="score-panel">
+           <div class="scoreboard"> 
+             <div class="scorebox">
+              Score <div id="score-value"> 0 </div>
+             </div> 
+            <button onClick="window.location.reload();">New Game</button>
+        </div>
+        </div>
+      <div class="grid-panel">
+        <div class="grid">
+    
+        </div>
+      </div>
+    </div>
+    <div class="howtoplay"><h3>How To play: </h3> <p> Use your arrow keys to move the tiles.When two tiles slide into each other,they merge into one! </p></div>
+  </div>
+  
+<script src="app.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

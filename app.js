@@ -5,23 +5,26 @@ document.addEventListener('DOMContentLoaded', () =>  {
   const width=4;
   let score = 0;
   let squares=[];
-  function createBoard(){
+  
+  
+// Function to create board
+function createBoard(){
     for(let i=0; i < width*width; i++){
      square = document.createElement("div");
     square.innerHTML = 0;
     gridDisplay.appendChild(square);
     squares.push(square);
-    
   }
   generate();
   generate();
   
 }
 createBoard();
-// Function to generate random square to start with number 2
+
+// Function to generate number 2 in a random square 
+
 function generate(){
 let randomGenerator =Math.floor(Math.random() * squares.length);
-
 if(squares[randomGenerator].innerHTML == 0){
 squares[randomGenerator].innerHTML = 2;
 iflost();
@@ -144,6 +147,7 @@ function combineColumn(){
   ifWon();
 }
 document.addEventListener('keyup', control);
+
 // keycodes
 function control(e){
   if(e.keyCode === 37){
@@ -157,6 +161,7 @@ function control(e){
 }
 }
 
+// Function for keys
 
 function keyLeft(){
   leftSwipe();
@@ -183,7 +188,7 @@ function keyDown() {
   generate();
 }
 
-// function to check if we window
+// function to check if won
 function ifWon(){
   for(let i=0; i<squares.length;  i++){
     if(squares[i].innerHTML == 2048){
@@ -198,28 +203,23 @@ function ifWon(){
   }
 }
 
-//function to check if you lose
+//function to check losing the game
 function iflost(){
    let zeros =0;
-  for(let i=0; i<squares.length; i++) {
-   
-    if(squares[i].innerHTML == 0){
+    for(let i=0; i<squares.length; i++) {
+      if(squares[i].innerHTML == 0){
       zeros++;
+      }
     }
-
-  }
-  if(zeros === 0){
-    swal({
+    if(zeros === 0){
+      swal({
       title: "Game Over",
       text: "You Lose!",
       icon: "error",
-    })
+      })
     document.removeEventListener('keyup',control);
-  }
+   }
 }
 
 
 })
-
-
-
