@@ -21,6 +21,7 @@ function createBoard(){
 }
 createBoard();
 
+
 // Function to generate number 2 in a random square 
 
 function generate(){
